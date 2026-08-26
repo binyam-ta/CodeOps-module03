@@ -1,0 +1,409 @@
+/* ===================================================
+   Addis Café — Design Tokens
+   =================================================== */
+:root {
+  --green: #2f5d3a;
+  --green-dark: #1e3d26;
+  --gold: #c99a2e;
+  --gold-light: #ddb94e;
+  --cream: #f7f3ea;
+  --cream-dark: #ede8dc;
+  --white: #ffffff;
+  --text-primary: #2b2b2b;
+  --text-secondary: #6b6b6b;
+  --text-light: #999999;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.14);
+  --radius: 8px;
+  --max-width: 1200px;
+}
+
+/* ===================================================
+   Global Reset & Base
+   =================================================== */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    sans-serif;
+  background-color: var(--cream);
+  color: var(--text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ===================================================
+   Header
+   =================================================== */
+.header {
+  background-color: var(--green);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: 2px;
+  line-height: 1.2;
+}
+
+.header-tagline {
+  font-size: 0.8rem;
+  color: var(--gold-light);
+  font-weight: 400;
+  margin-top: 2px;
+  letter-spacing: 0.5px;
+}
+
+.header-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--white);
+}
+
+/* ===================================================
+   Hero Section
+   =================================================== */
+.hero {
+  width: 100%;
+  height: 480px;
+  background-image: url("https://images.unsplash.com/photo-1611564494260-6f21b80af7ea?w=1400&h=600&fit=crop&q=80");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.hero-overlay {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to right,
+    rgba(30, 50, 30, 0.82) 0%,
+    rgba(30, 50, 30, 0.5) 50%,
+    rgba(30, 50, 30, 0.15) 100%
+  );
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+.hero-heading {
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 0.75rem;
+}
+
+.hero-subtext {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 420px;
+  line-height: 1.6;
+  margin-bottom: 1.75rem;
+}
+
+.hero-button {
+  display: inline-block;
+  background-color: var(--green);
+  color: var(--white);
+  padding: 0.75rem 1.75rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+  transition: background-color 0.2s ease;
+}
+
+.hero-button:hover {
+  background-color: var(--green-dark);
+}
+
+/* ===================================================
+   Menu Section
+   =================================================== */
+.menu-section {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+/* Menu intro */
+.menu-intro {
+  margin-bottom: 2.5rem;
+}
+
+.menu-heading {
+  text-align: center;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.6rem;
+}
+
+.menu-subtitle {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* Menu grid */
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+/* ===================================================
+   Menu Card
+   =================================================== */
+.menu-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.menu-card-image {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+
+.menu-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+  transform: scale(1.04);
+}
+
+.menu-card-body {
+  padding: 1.25rem 1.25rem 1.1rem;
+}
+
+.menu-item-name {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.4rem;
+}
+
+.menu-item-description {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin-bottom: 1rem;
+}
+
+.menu-item-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item-category {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--gold);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 1px;
+}
+
+.menu-item-price {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.menu-item-tax {
+  font-size: 0.72rem;
+  color: var(--text-light);
+  text-align: right;
+  margin-top: 0.25rem;
+}
+
+/* ===================================================
+   Footer
+   =================================================== */
+.footer {
+  background-color: var(--green);
+}
+
+.footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--cream);
+  letter-spacing: 2px;
+  margin-bottom: 0.5rem;
+}
+
+.footer-tagline {
+  font-size: 0.9rem;
+  color: var(--gold-light);
+  margin-bottom: 0.3rem;
+}
+
+.footer-location {
+  font-size: 0.85rem;
+  color: rgba(247, 243, 234, 0.7);
+  margin-bottom: 0.75rem;
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: rgba(247, 243, 234, 0.5);
+}
+
+/* ===================================================
+   Responsive — Tablet
+   =================================================== */
+@media (max-width: 900px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero {
+    height: 400px;
+  }
+
+  .hero-heading {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================================
+   Responsive — Mobile
+   =================================================== */
+@media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+    padding: 1rem 1.25rem;
+  }
+
+  .header-nav {
+    gap: 1.25rem;
+  }
+
+  .nav-link {
+    font-size: 0.85rem;
+  }
+
+  .hero {
+    height: 350px;
+  }
+
+  .hero-overlay {
+    background: linear-gradient(
+      to top,
+      rgba(30, 50, 30, 0.85) 0%,
+      rgba(30, 50, 30, 0.4) 100%
+    );
+    align-items: flex-end;
+  }
+
+  .hero-content {
+    padding: 0 1.25rem 2rem;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-subtext {
+    font-size: 1rem;
+  }
+
+  .menu-section {
+    padding: 0 1.25rem 3rem;
+  }
+
+  .menu-heading {
+    font-size: 1.75rem;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .menu-card-image {
+    height: 220px;
+  }
+
+  .footer-inner {
+    padding: 2.5rem 1.25rem;
+  }
+}
