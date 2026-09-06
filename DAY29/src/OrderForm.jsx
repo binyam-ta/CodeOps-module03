@@ -13,8 +13,6 @@ const DELIVERY_AREAS = [
   "Arat Kilo",
 ];
 
-// TeleBirr phone validation regex:
-// Accepts 09xxxxxxxx, 07xxxxxxxx (10 digits) and +2519xxxxxxxx, +2517xxxxxxxx (13 chars)
 const TELEBIRR_REGEX = /^(?:\+251|0)[97]\d{8}$/;
 
 function OrderForm({ orderTotal, onOrderSuccess, onClearOrder }) {

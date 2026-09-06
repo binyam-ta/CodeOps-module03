@@ -1,10 +1,3 @@
-/**
- * Fetches dishes from the server endpoint with optional category filtering and AbortSignal support.
- *
- * @param {string} [category="All"] - The category to filter by ("All", "Main", "Drink", etc.)
- * @param {AbortSignal|{ signal: AbortSignal }} [optionsOrSignal] - AbortSignal or options object with signal
- * @returns {Promise<Array>} Array of dishes matching the category
- */
 export async function fetchDishes(category = "All", optionsOrSignal) {
   const signal =
     optionsOrSignal instanceof AbortSignal
