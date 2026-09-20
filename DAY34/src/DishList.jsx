@@ -17,7 +17,7 @@ function DishList({ dishes = [], loading = false, error = null, onAdd }) {
   if (error) {
     return (
       <div className="menu-status-container error">
-        <div className="error-icon">X</div>
+        <div className="error-icon">⚠️</div>
         <p className="err">{error}</p>
       </div>
     );
