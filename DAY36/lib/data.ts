@@ -1,0 +1,115 @@
+import { Dish } from "./types";
+
+export const dishes: Dish[] = [
+  {
+    id: 1,
+    slug: "buna",
+    name: "Buna",
+    price: 80,
+    description:
+      "Traditional Ethiopian coffee prepared with freshly roasted beans and served in a jebena.",
+    category: "Drink",
+    spicy: false,
+    image:
+      "https://images.unsplash.com/photo-1611564494260-6f21b80af7ea?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    id: 2,
+    slug: "shiro",
+    name: "Shiro",
+    price: 150,
+    description:
+      "Slow-cooked chickpea stew seasoned with berbere spice, served with fresh injera.",
+    category: "Main",
+    spicy: true,
+    image:
+      "https://th.bing.com/th/id/OIP._6v2LlOOljVU505SewV8lgHaHa?w=180&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 3,
+    slug: "tibs",
+    name: "Tibs",
+    price: 250,
+    description:
+      "Sautéed beef with onions, tomatoes, and green peppers served on warm injera.",
+    category: "Main",
+    spicy: true,
+    image:
+      "https://th.bing.com/th/id/OIP.6PvZVFWaZ-OMGbG6O2wilQHaF7?w=228&h=182&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 4,
+    slug: "firfir",
+    name: "Firfir",
+    price: 100,
+    description:
+      "Shredded injera simmered in a rich berbere sauce with spiced butter.",
+    category: "Breakfast",
+    spicy: true,
+    image:
+      "https://th.bing.com/th/id/OIP.EYFb85zh_6EHK6ldQxFVywHaEK?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 5,
+    slug: "doro-wat",
+    name: "Doro Wat",
+    price: 280,
+    description:
+      "Ethiopia's signature spicy chicken stew slow-cooked with hard-boiled eggs and berbere.",
+    category: "Main",
+    spicy: true,
+    image:
+      "https://th.bing.com/th/id/OIP.eiwztSL57PslAC4AqpBzMAHaE6?w=328&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 6,
+    slug: "baklava",
+    name: "Baklava",
+    price: 120,
+    description:
+      "Sweet layered pastry filled with chopped nuts and drizzled with honey syrup.",
+    category: "Dessert",
+    spicy: false,
+    image:
+      "https://th.bing.com/th/id/OIP.TQRz987Sv_vNTXuBZ_N3GQHaE7?w=233&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 7,
+    slug: "mango-juice",
+    name: "Mango Juice",
+    price: 90,
+    description:
+      "Freshly squeezed mango juice served chilled in a tall glass.",
+    category: "Drink",
+    spicy: false,
+    image:
+      "https://images.unsplash.com/photo-1546173159-315724a31696?w=600&h=400&fit=crop&q=80",
+  },
+  {
+    id: 8,
+    slug: "chechebsa",
+    name: "Chechebsa",
+    price: 110,
+    description:
+      "Crispy flatbread torn and tossed with spiced butter and a touch of berbere.",
+    category: "Breakfast",
+    spicy: false,
+    image:
+      "https://th.bing.com/th/id/OIP.63NdS3aecJ_RIoTPkFUVhQHaE8?w=280&h=187&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3",
+  },
+  {
+    id: 9,
+    slug: "kitfo",
+    name: "Kitfo",
+    price: 320,
+    description:
+      "Traditional minced lean beef seasoned with spicy mitmita powder and purified spiced butter (niter kibbeh), served with fresh injera and kocho.",
+    category: "Main",
+    spicy: true,
+    image:
+      "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop&q=80",
+  },
+];
+
+export const menu = dishes;
+export default dishes;
