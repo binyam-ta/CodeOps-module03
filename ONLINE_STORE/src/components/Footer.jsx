@@ -1,17 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * FOOTER COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Clean luxury footer strictly adhering to the 5-color palette:
- * - Brand ethos & story
- * - Navigation links & scent family discovery
- * - CodeOps Day 43 Project disclaimer and student credentials
- * - Semantic <footer> element with accessible typography
- * ==============================================================================
- */
-
 import React from "react";
 import Link from "next/link";
 import { Box, Container, Grid, Typography, Divider, Stack } from "@mui/material";
@@ -61,7 +48,7 @@ export default function Footer() {
               >
                 SHETA{" "}
                 <span style={{ color: SHETA_COLORS.royalGold, fontWeight: 500 }}>
-                  (ሽታ)
+                 | ሽታ
                 </span>
               </Typography>
             </Box>
@@ -74,7 +61,7 @@ export default function Footer() {
                 mb: 3
               }}
             >
-              "Sheta" (ሽታ) signifies the sublime presence of fragrance and aroma in
+              Sheta | ሽታ signifies the sublime presence of fragrance and aroma in
               Amharic. We craft artisanal extraits de parfum, marrying wild high-altitude
               Bale frankincense, Semien cedarwood, and Damascene rose with modern perfumery elegance.
             </Typography>
@@ -113,54 +100,7 @@ export default function Footer() {
             </Stack>
           </Grid>
 
-          {/* Customer Journey Column */}
-          <Grid item xs={6} sm={4} md={2}>
-            <Typography
-              variant="subtitle2"
-              sx={{
-                fontWeight: 700,
-                color: SHETA_COLORS.royalGold,
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                mb: 2
-              }}
-            >
-              Customer Journey
-            </Typography>
-            <Stack spacing={1.2}>
-              <Link href="/cart" style={{ color: SHETA_COLORS.mutedSlate, textDecoration: "none", fontSize: "0.875rem" }}>
-                Shopping Cart
-              </Link>
-              <Link href="/checkout" style={{ color: SHETA_COLORS.mutedSlate, textDecoration: "none", fontSize: "0.875rem" }}>
-                Direct Order Form
-              </Link>
-              <Typography variant="body2" sx={{ color: SHETA_COLORS.mutedSlate }}>
-                Free Samples Included
-              </Typography>
-              <Typography variant="body2" sx={{ color: SHETA_COLORS.mutedSlate }}>
-                No Card Needed (Demo)
-              </Typography>
-            </Stack>
-          </Grid>
 
-          {/* Academic Context Column */}
-          <Grid item xs={12} sm={4} md={3}>
-            <Typography
-              variant="subtitle2"
-              sx={{
-                fontWeight: 700,
-                color: SHETA_COLORS.royalGold,
-                textTransform: "uppercase",
-                letterSpacing: "0.1em",
-                mb: 2
-              }}
-            >
-              Academic Scope
-            </Typography>
-            <Typography variant="body2" sx={{ color: SHETA_COLORS.mutedSlate, lineHeight: 1.7 }}>
-              IBT College • CodeOps Day 43 Project. Built to demonstrate Next.js App Router performance, clean UI/UX with 5-color constraints, and end-to-end shopping journeys.
-            </Typography>
-          </Grid>
         </Grid>
 
         <Divider sx={{ my: 4, borderColor: "rgba(107, 114, 128, 0.2)" }} />
@@ -176,10 +116,10 @@ export default function Footer() {
           }}
         >
           <Typography variant="caption" sx={{ color: SHETA_COLORS.mutedSlate }}>
-            © {new Date().getFullYear()} Sheta Perfumes (ሽታ). All rights reserved.
+            © {new Date().getFullYear()} Sheta Perfumes | ሽታ. All rights reserved.
           </Typography>
           <Typography variant="caption" sx={{ color: SHETA_COLORS.mutedSlate }}>
-            Clean UI/UX • Strict 5-Color Palette • Powered by Next.js & MUI
+            Bole • Addis Abeba • Ethiopia
           </Typography>
         </Box>
       </Container>

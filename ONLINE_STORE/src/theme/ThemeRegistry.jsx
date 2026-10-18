@@ -1,14 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * THEME REGISTRY COMPONENT (Next.js App Router + Emotion Cache)
- * ==============================================================================
- * Provides the Emotion Cache and Material UI ThemeProvider to client & server
- * components within the App Router without flickering or hydration mismatches.
- * ==============================================================================
- */
-
 import * as React from "react";
 import createCache from "@emotion/cache";
 import { useServerInsertedHTML } from "next/navigation";

@@ -1,23 +1,6 @@
 "use client";
-
-/**
- * ==============================================================================
- * SHETA (ሽታ) - CART CONTEXT & STATE MANAGEMENT
- * ==============================================================================
- * Central React Context managing shopping cart state throughout the user journey:
- * - Adding perfumes with selected quantities.
- * - Deduplicating items: increments quantity if item already exists.
- * - Updating quantities (increment/decrement with boundary guard).
- * - Removing line items.
- * - Dynamic calculations: line item totals, overall cart subtotal, item counter.
- * - Persistence across client reloads via localStorage.
- * - Order clearing hook upon successful checkout.
- * ==============================================================================
- */
-
 import React, { createContext, useContext, useState, useEffect } from "react";
 
-// Create the Context with default empty values
 const CartContext = createContext({
   cart: [],
   addToCart: () => {},
@@ -34,11 +17,11 @@ const CartContext = createContext({
 const STORAGE_KEY = "sheta_perfumes_cart_v1";
 
 export function CartProvider({ children }) {
-  // State to hold the cart items array
+ 
   const [cart, setCart] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
 
-  // 1. Initial hydration: Retrieve cart from localStorage on mount
+  
   useEffect(() => {
     try {
       const savedCart = localStorage.getItem(STORAGE_KEY);
@@ -52,7 +35,6 @@ export function CartProvider({ children }) {
     }
   }, []);
 
-  // 2. Persistence: Sync cart to localStorage whenever it changes
   useEffect(() => {
     if (isLoaded) {
       try {
@@ -63,12 +45,7 @@ export function CartProvider({ children }) {
     }
   }, [cart, isLoaded]);
 
-  /**
-   * Add a perfume item to the cart.
-   * If the item is already present, increase its quantity instead of creating duplicate line items.
-   * @param {object} product - The product object to add
-   * @param {number} quantity - Number of bottles to add (defaults to 1)
-   */
+
   const addToCart = (product, quantity = 1) => {
     setCart((prevCart) => {
       const existingIndex = prevCart.findIndex((item) => item.id === product.id);
@@ -89,12 +66,6 @@ export function CartProvider({ children }) {
     });
   };
 
-  /**
-   * Update the bottle quantity for a specific product.
-   * If quantity falls below 1, remove the item entirely.
-   * @param {string} productId - Unique ID of product
-   * @param {number} newQuantity - Desired quantity
-   */
   const updateQuantity = (productId, newQuantity) => {
     if (newQuantity <= 0) {
       removeFromCart(productId);
@@ -108,17 +79,10 @@ export function CartProvider({ children }) {
     );
   };
 
-  /**
-   * Remove a product completely from the cart.
-   * @param {string} productId - Unique ID of product to remove
-   */
   const removeFromCart = (productId) => {
     setCart((prevCart) => prevCart.filter((item) => item.id !== productId));
   };
 
-  /**
-   * Clear all items from the cart (invoked after order placement).
-   */
   const clearCart = () => {
     setCart([]);
     try {
@@ -165,9 +129,7 @@ export function CartProvider({ children }) {
   );
 }
 
-/**
- * Custom hook for fast and typed access to the Cart context
- */
+
 export function useCart() {
   const context = useContext(CartContext);
   if (!context) {

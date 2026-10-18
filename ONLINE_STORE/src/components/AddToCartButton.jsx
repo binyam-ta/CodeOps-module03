@@ -1,16 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * ADD TO CART BUTTON COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Standalone, reusable interactive cart button:
- * - Accepts product payload and selected quantity.
- * - Handles interactive feedback states (Idle, Adding, Added).
- * - Full accessibility with screen-reader feedback.
- * ==============================================================================
- */
-
 import React, { useState } from "react";
 import { Button, CircularProgress } from "@mui/material";
 import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";

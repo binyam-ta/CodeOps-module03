@@ -1,21 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * CHECKOUT ORDER FORM (/checkout) - SHETA (ሽታ)
- * ==============================================================================
- * Customer delivery order submission form fulfilling Phase 5 requirements:
- * - Collects customer name, contact details (email, phone), and physical delivery address.
- * - Comprehensive client-side validation with clear, helpful feedback messages.
- * - Displays an interactive order summary before submission.
- * - Guard: Blocks submission and redirects if cart is empty.
- * - SCOPE COMPLIANCE: Pure order submission — NO credit cards, banking info, or payments.
- * - Generates unique order reference token (SHETA-2026-XXXX) and saves to sessionStorage.
- * - Clears cart and transitions smoothly to /order-success.
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
@@ -203,7 +186,7 @@ export default function CheckoutPage() {
             Delivery & Customer Details
           </Typography>
           <Typography variant="body2" sx={{ color: SHETA_COLORS.mutedSlate }}>
-            Complete your delivery information below. No payment card details are required for this demo order.
+            Complete your delivery information below. 
           </Typography>
         </Box>
 
@@ -219,21 +202,6 @@ export default function CheckoutPage() {
                 border: "1px solid rgba(107, 114, 128, 0.15)"
               }}
             >
-              {/* Notice regarding project payment scope */}
-              <Alert
-                severity="info"
-                icon={<SecurityIcon sx={{ color: SHETA_COLORS.royalGold }} />}
-                sx={{
-                  mb: 4,
-                  backgroundColor: "rgba(197, 160, 89, 0.1)",
-                  color: SHETA_COLORS.obsidian,
-                  border: `1px solid ${SHETA_COLORS.royalGold}`,
-                  borderRadius: 2
-                }}
-              >
-                <strong>Academic Project Scope Notice:</strong> This store demonstrates the full shopping
-                flow without payment processing. No credit cards or payment credentials will be requested.
-              </Alert>
 
               <Box component="form" onSubmit={handleSubmit} noValidate>
                 {/* 1. Contact Information */}

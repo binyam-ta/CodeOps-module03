@@ -1,17 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * CART SUMMARY COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Renders the financial calculation and order progression panel:
- * - Real-time computed subtotal, calculated tax, and qualified free shipping.
- * - Dynamic free shipping progress indicator (complimentary above $150).
- * - Direct navigation to checkout form.
- * - Adheres strictly to the 5-color palette (#121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280).
- * ==============================================================================
- */
-
 import React from "react";
 import Link from "next/link";
 import {

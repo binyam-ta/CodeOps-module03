@@ -1,15 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * PRODUCT GRID COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Renders an accessible, responsive grid container for perfume cards:
- * - Responsive breakpoints: 1 column on mobile, 2 on tablet, 3 on desktop, 4 on wide screens.
- * - Graceful fallback empty state when search queries or category filters yield no results.
- * ==============================================================================
- */
-
 import React from "react";
 import { Grid, Box, Typography, Button } from "@mui/material";
 import SearchOffIcon from "@mui/icons-material/SearchOff";

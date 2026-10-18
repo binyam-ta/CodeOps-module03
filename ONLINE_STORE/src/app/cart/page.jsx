@@ -1,19 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * SHOPPING CART PAGE (/cart) - SHETA (ሽታ)
- * ==============================================================================
- * Interactive shopping cart fulfilling Phase 4 requirements:
- * - Line item list with bottle thumbnail, perfume details, unit price, and line totals.
- * - Quantity adjusters with zero/removal boundaries.
- * - Dynamic subtotal calculation through CartContext.
- * - Helpful empty state with reassuring copy and link back to catalogue.
- * - Integrated CartSummary order calculation sidebar.
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";

@@ -1,20 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * PRODUCT CARD COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Reusable showcase card for perfume products:
- * - Next.js Image optimization with responsive sizing and aspect ratio.
- * - Amharic & English typography honoring Ethiopian heritage.
- * - Scent notes pills (top / heart / base).
- * - Real-time rating stars and pricing.
- * - Smooth transition hover effects with gold accent borders.
- * - Seamless linking to product detail route (/products/[id]).
- * - Direct Add to Cart micro-interaction.
- * ==============================================================================
- */
-
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

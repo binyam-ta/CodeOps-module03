@@ -1,19 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * HOME PAGE (/) - SHETA (ሽታ) PERFUMES
- * ==============================================================================
- * Primary landing page introducing the brand identity and perfume catalogue:
- * - Luxury Hero Section with Amharic typography and primary call-to-actions.
- * - Scent Families quick filters.
- * - Curated Featured Fragrances grid (using reusable ProductGrid & ProductCard).
- * - "The Art of Sheta" heritage & craftsmanship story.
- * - Four artisanal commitments (Highland Boswellia, 25% Extrait, Slow Maceration, Clean formulation).
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -60,23 +45,7 @@ export default function HomePage() {
         <Container maxWidth="lg">
           <Grid container spacing={{ xs: 6, md: 8 }} alignItems="center">
             {/* Left Column: Headline and Call-to-actions */}
-            <Grid item xs={12} md={7}>
-              <Box sx={{ mb: 2, display: "flex", alignItems: "center", gap: 1 }}>
-                <Chip
-                  icon={<SparklesIcon style={{ color: SHETA_COLORS.royalGold, fontSize: 16 }} />}
-                  label="HAUTE PARFUMERIE D'ÉTHIOPIE"
-                  size="small"
-                  sx={{
-                    backgroundColor: "rgba(197, 160, 89, 0.12)",
-                    color: SHETA_COLORS.obsidian,
-                    fontWeight: 700,
-                    letterSpacing: "0.1em",
-                    fontSize: "0.72rem",
-                    border: `1px solid ${SHETA_COLORS.royalGold}`
-                  }}
-                />
-              </Box>
-
+            <Grid item xs={12} md={7}> 
               <Typography
                 variant="h1"
                 sx={{
@@ -101,7 +70,7 @@ export default function HomePage() {
                   mb: 2.5
                 }}
               >
-                "Sheta" (ሽታ) — The sacred poetry of scent and memory.
+                Sheta | ሽታ - The sacred poetry of scent and memory.
               </Typography>
 
               <Typography

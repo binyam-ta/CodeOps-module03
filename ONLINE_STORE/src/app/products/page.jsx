@@ -1,19 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * CATALOGUE PAGE (/products) - SHETA (ሽታ) PERFUMES
- * ==============================================================================
- * Comprehensive fragrance discovery catalog:
- * - Real-time client-side text searching (by perfume name, Amharic title, notes, notes).
- * - Category filter pills for each olfactory family.
- * - Sorting: Featured first, Price low-to-high, Price high-to-low, Highest rated.
- * - In-stock filter toggle.
- * - Dynamic product counter and reset controls.
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React, { useState, useMemo, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import {
@@ -108,20 +93,6 @@ function ProductsContent() {
       <Container maxWidth="lg">
         {/* Header Title & Subtitle */}
         <Box sx={{ textAlign: "center", maxWidth: 700, mx: "auto", mb: 6 }}>
-          <Box sx={{ display: "inline-flex", alignItems: "center", gap: 0.8, mb: 1 }}>
-            <SparklesIcon sx={{ fontSize: 18, color: SHETA_COLORS.royalGold }} />
-            <Typography
-              variant="overline"
-              sx={{
-                color: SHETA_COLORS.royalGold,
-                letterSpacing: "0.15em",
-                fontWeight: 700,
-                fontSize: "0.8rem"
-              }}
-            >
-              COMPLETE OLFACTORY ARCHIVE
-            </Typography>
-          </Box>
           <Typography
             variant="h2"
             sx={{

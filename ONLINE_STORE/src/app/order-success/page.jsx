@@ -1,19 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * ORDER CONFIRMATION PAGE (/order-success) - SHETA (ሽታ)
- * ==============================================================================
- * Post-order confirmation screen fulfilling Phase 5 requirements:
- * - Displays generated unique reference code (e.g., SHETA-2026-XXXX).
- * - Full summary of ordered flacons, delivery destination, and financial total.
- * - Explains subsequent packaging & dispatch steps.
- * - Reassures the customer that no financial charge was processed (demonstration mode).
- * - Navigation action returning customer to fragrance catalogue.
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";

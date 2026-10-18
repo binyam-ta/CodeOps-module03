@@ -1,17 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * NAVBAR COMPONENT - SHETA (ሽታ)
- * ==============================================================================
- * Top-level responsive navigation bar adhering to the 5-color palette:
- * - Brand insignia: "SHETA • ሽታ"
- * - Navigation links: Home (/), Fragrance Collection (/products), Cart (/cart)
- * - Cart Icon with real-time reactive badge counter
- * - Mobile responsive drawer menu for phone/tablet screens
- * ==============================================================================
- */
-
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -122,20 +109,8 @@ export default function Navbar() {
                       ml: 0.8
                     }}
                   >
-                    (ሽታ)
+                   | ሽታ
                   </Box>
-                </Typography>
-                <Typography
-                  variant="caption"
-                  sx={{
-                    letterSpacing: "0.2em",
-                    fontSize: "0.65rem",
-                    color: SHETA_COLORS.mutedSlate,
-                    textTransform: "uppercase",
-                    display: "block"
-                  }}
-                >
-                  Haute Parfumerie
                 </Typography>
               </Box>
             </Link>

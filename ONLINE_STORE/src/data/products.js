@@ -1,17 +1,3 @@
-/**
- * ==============================================================================
- * SHETA (ሽታ) PERFUMES - PRODUCT DATA STORE
- * ==============================================================================
- * This module serves as the single source of truth for all perfume products
- * across the entire application (Catalogue, Home, Product Details, Cart, Checkout).
- *
- * Requirements fulfilled:
- * - 10 realistic artisanal & luxury perfume products (between 8-12 per roadmap).
- * - Uniform schema containing: id, name, price, category, image, description, available.
- * - Extended metadata: scentProfile, notes (top/heart/base), volume, rating, featured flag.
- * ==============================================================================
- */
-
 export const PRODUCTS = [
   {
     id: "sheta-01",

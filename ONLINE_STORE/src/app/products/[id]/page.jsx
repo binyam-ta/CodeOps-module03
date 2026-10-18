@@ -1,21 +1,4 @@
 "use client";
-
-/**
- * ==============================================================================
- * PRODUCT DETAIL PAGE (/products/[id]) - SHETA (ሽታ)
- * ==============================================================================
- * Individual fragrance flacon showcase:
- * - Dynamic route handling using product id parameter.
- * - Graceful not-found error handling for invalid or missing IDs.
- * - High-resolution Next.js Image presentation with luxury aspect ratio.
- * - Olfactory Pyramid breakdown: Top notes, Heart notes, Base notes.
- * - Interactive bottle quantity adjuster (+ / -).
- * - Direct Add to Cart integration via AddToCartButton.
- * - Related fragrances carousel/grid.
- * - Strict 5-color palette: #121212, #C5A059, #FAF8F5, #FFFFFF, #6B7280.
- * ==============================================================================
- */
-
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";

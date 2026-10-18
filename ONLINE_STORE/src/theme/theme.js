@@ -1,21 +1,6 @@
 "use client";
-
-/**
- * ==============================================================================
- * SHETA (ሽታ) - MUI THEME DEFINITION
- * ==============================================================================
- * Strict 5-Color Luxury Palette:
- * 1. #121212 - Obsidian Onyx (Primary text, dark headers, bold actions)
- * 2. #C5A059 - Royal Gold (Accent essence, ratings, active badges, highlights)
- * 3. #FAF8F5 - Alabaster Cream (Global ambient background canvas)
- * 4. #FFFFFF - Pure White (Card surfaces, inputs, modal containers)
- * 5. #6B7280 - Muted Slate (Secondary text, borders, placeholders, metadata)
- * ==============================================================================
- */
-
 import { createTheme } from "@mui/material/styles";
 
-// Export explicit color tokens so any component can reference the exact 5 colors
 export const SHETA_COLORS = {
   obsidian: "#121212",
   royalGold: "#C5A059",
