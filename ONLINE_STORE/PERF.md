@@ -85,13 +85,3 @@ Honest measurements recorded across the shopping journey before optimization (un
 
 ---
 
-## 4. Key Takeaways & Questions Addressed
-
-1. **Why did we put product data in one shared file?**
-   - Centralizing the catalogue in `src/data/products.js` guarantees that prices, descriptions, stock availability, and scent notes remain 100% consistent across every view (Home featured section, Catalogue filter, Product Detail, Cart calculations, and Checkout summaries) without data drift.
-2. **Why should a product card usually not need to be a Client Component?**
-   - A product card that only displays image, name, price, and links to the product detail route can render purely on the server, generating static HTML with zero client JavaScript runtime weight. Client state is only added when an interactive Add to Cart micro-interaction is embedded directly on the card.
-3. **Which part of the store needs client-side state, and why?**
-   - The shopping cart (`CartContext.jsx`), filter/sort search controls (`ProductsPage.jsx`), mobile menu drawer (`Navbar.jsx`), and interactive validation form (`CheckoutPage.jsx`). These require instant browser feedback, user interaction events, and local persistence (`localStorage` / `sessionStorage`).
-4. **How did we prevent the subtotal from becoming incorrect?**
-   - Subtotal is computed directly from raw unit prices and quantities: `cart.reduce((sum, item) => sum + item.price * item.quantity, 0)` rather than hardcoded or mutated by separate uncontrolled variables. When an item is removed or updated, the subtotal is immediately recalculated deterministically.

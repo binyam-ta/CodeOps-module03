@@ -83,7 +83,7 @@ The application implements the complete 6-stage end-to-end shopping journey:
 
 ```text
 ONLINE_STORE/
-├── .env.example              # Safe environment variable template
+├── .env                      # Safe environment variable template
 ├── .gitignore                # Git ignore rules for node_modules, .next, etc.
 ├── next.config.js            # Next.js config with remote image patterns & formats
 ├── package.json              # Project dependencies & scripts
@@ -150,31 +150,3 @@ npm run start
 ```
 
 ---
-
-## 📝 Answers to Rubric Assessment Questions
-
-1. **Why did you put product data in one shared file?**
-   - Centralizing the catalogue into `src/data/products.js` establishes a single source of truth. Every view (the Home featured showcase, the Catalogue filter grid, the dynamic Product Detail page, the Cart line items, and the Checkout summary) reads the exact same names, prices, notes, and availability. This prevents price discrepancy bugs and makes catalogue maintenance instant and error-free.
-
-2. **Why should a product card usually not need to be a Client Component?**
-   - Static product display (image, title, notes, price, and link) requires no client-side JavaScript, event handlers, or browser state. Keeping display cards as Server Components allows the server to stream pre-rendered HTML, dramatically reducing client bundle size, improving Time to Interactive (TTI), and enhancing SEO.
-
-3. **Which part of your store needs client-side state, and why?**
-   - The Shopping Cart (`CartContext`), the Catalogue search/category filtering (`ProductsPage`), the mobile navigation drawer (`Navbar`), and the delivery form validation (`CheckoutPage`). These require immediate response to user input, interactive client state, and browser storage (`localStorage` / `sessionStorage`).
-
-4. **How did you prevent the subtotal from becoming incorrect?**
-   - The subtotal is calculated as a derived state: `cart.reduce((sum, item) => sum + item.price * item.quantity, 0)`. Rather than manually incrementing or decrementing separate state variables upon every add or remove event, the calculation executes over the current array of line items, ensuring math consistency.
-
-5. **What do LCP, CLS, and INP tell us?**
-   - **LCP (Largest Contentful Paint)**: Measures perceived loading speed — how fast the largest visual element (hero banner or perfume flacon image) renders on screen.
-   - **CLS (Cumulative Layout Shift)**: Measures visual stability — whether elements unexpectedly jump or shift while images or web fonts load.
-   - **INP (Interaction to Next Paint)**: Measures user interface responsiveness — how promptly the browser paints after a user clicks a button or types in an input.
-
-6. **What did you change after measuring performance?**
-   - We configured `next/image` with explicit `sizes` and aspect-ratio placeholder containers to eliminate layout shift (CLS dropped to 0.00), added preconnect hints for Google Fonts, and configured allowed remote image hosts in `next.config.js`.
-
-7. **Why should .env files with real secrets not be committed?**
-   - Committing credentials, private API keys, or database passwords to version control exposes them to anyone with repository access, risking security breaches and unauthorized data access. We commit only `.env.example` with harmless placeholder names.
-
-8. **Which environment variables are visible in the browser?**
-   - Only variables prefixed with `NEXT_PUBLIC_` (e.g., `NEXT_PUBLIC_STORE_NAME`). Any variable without this prefix is strictly restricted to server runtimes (API routes or Server Components) and never bundled into client JavaScript.
