@@ -1,17 +1,3 @@
-/**
- * ==============================================================================
- * GLOBAL STYLESHEET - SHETA (ሽታ) PERFUMES
- * ==============================================================================
- * Optimized global styles with strict 5-color palette:
- * - #121212 (Obsidian Onyx)
- * - #C5A059 (Royal Gold)
- * - #FAF8F5 (Alabaster Cream)
- * - #FFFFFF (Pure White)
- * - #6B7280 (Muted Slate)
- * Uses Next.js self-hosted font variables for zero render-blocking requests
- * ==============================================================================
- */
-
 *, *::before, *::after {
   box-sizing: border-box;
 }
