@@ -1,17 +1,41 @@
+/**
+ * ==============================================================================
+ * GLOBAL STYLESHEET - SHETA (ሽታ) PERFUMES
+ * ==============================================================================
+ * Optimized global styles with strict 5-color palette:
+ * - #121212 (Obsidian Onyx)
+ * - #C5A059 (Royal Gold)
+ * - #FAF8F5 (Alabaster Cream)
+ * - #FFFFFF (Pure White)
+ * - #6B7280 (Muted Slate)
+ * Uses Next.js self-hosted font variables for zero render-blocking requests
+ * ==============================================================================
+ */
 
-     body {
-            margin: 0;
-            padding: 0;
-            background-color: #FAF8F5;
-            color: #121212;
-            font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            -webkit-font-smoothing: antialiased;
-          }
-          ::selection {
-            background-color: #C5A059;
-            color: #121212;
-          }
-          h1, h2, h3, .font-serif {
-            font-family: 'Playfair Display', Georgia, serif;
-          }
-        
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #FAF8F5;
+  color: #121212;
+  font-family: var(--font-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background-color: #C5A059;
+  color: #121212;
+}
+
+h1, h2, h3, h4, h5, h6, .font-serif {
+  font-family: var(--font-playfair), Georgia, serif;
+}
